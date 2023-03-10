@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <style>
+        #creciente {
+            text-align: center;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            let n = 69420;
+            let c = 1;
+            let contador = setInterval(() => {
+                $("#creciente").text(c);
+                c += Math.round(n / 40 + 1);
+            }, 50);
+            setTimeout(() => {
+                clearInterval(contador);
+                $("#creciente").text(n);
+            }, 2000);
+
+        });
+    </script>
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h1 id="creciente">0</h1>
+</body>
+
+</html>
